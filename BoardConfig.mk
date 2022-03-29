@@ -49,7 +49,7 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_USE_LZ4 := true
-KERNEL_DEFCONFIG := samurai_defconfig
+KERNEL_DEFCONFIG := samurai_defconfig vendor/debugfs.config
 
 # Platform
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
