@@ -1104,15 +1104,7 @@
          available on some devices. -->
     <bool name="config_enableHapticTextHandle">true</bool>
 
-    <!-- Mock Oplus LinearmotorVibratorService -->
-    <bool name="config_mockOplusLinearmotorVibratorService">true</bool>
+    <!-- Fingerprint from stock ROM -->
+    <string name="config_stockFingerprint" translatable="false">realme/RMX1931/RMX1931L1:11/RKQ1.200928.002/1625457120608:user/release-keys</string>
 
-    <!-- Whether device has VOOC charging support -->
-    <bool name="config_hasVoocCharger">true</bool>
-
-    <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
-    <string name="config_oemFastChargerStatusPath" translatable="false">"/sys/class/power_supply/battery/voocchg_ing"</string>
-
-    <!-- Screen off UDFPS -->
-    <bool name="config_supportScreenOffUdfps">true</bool>
 </resources>
