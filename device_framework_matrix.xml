@@ -9,9 +9,9 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>android.hardware.bluetooth.audio</name>
-        <version>2</version>
+        <version>2.1</version>
         <interface>
-            <name>IBluetoothAudioProviderFactory</name>
+            <name>IBluetoothAudioProvidersFactory</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -52,6 +52,14 @@
         <version>1.6</version>
         <interface>
             <name>IWifi</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.aospa.power</name>
+        <version>1</version>
+        <interface>
+            <name>IPowerFeature</name>
             <instance>default</instance>
         </interface>
     </hal>

@@ -51,9 +51,6 @@
 # System Helper Service
 /(vendor|system/vendor)/bin/hw/vendor.oplus.hardware.syshelper.service                                  u:object_r:hal_syshelper_default_exec:s0
 
-# Touch HAL
-/vendor/bin/hw/vendor\.lineage\.touch@1\.0-service\.samurai                                             u:object_r:hal_lineage_touch_default_exec:s0
-
 # USB
 /sys/class/power_supply/usb/otg_switch                                                                  u:object_r:sysfs_usb_supply:s0
 /sys/devices/virtual/android_usb/android0/state                                                         u:object_r:sysfs_usb_supply:s0
