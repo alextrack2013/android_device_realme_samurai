@@ -48,6 +48,12 @@ persist.vendor.rpmb.enable.state    u:object_r:oppo_fp_prop:s0
 ro.camera.res.fmq.size              u:object_r:camera_ro_prop:s0
 ro.camera.req.fmq.size              u:object_r:camera_ro_prop:s0
 
+# Power
+vendor.powerhal.state               u:object_r:vendor_power_prop:s0
+vendor.powerhal.audio               u:object_r:vendor_power_prop:s0
+vendor.powerhal.lpm                 u:object_r:vendor_power_prop:s0
+vendor.powerhal.init                u:object_r:vendor_power_prop:s0
+vendor.powerhal.rendering           u:object_r:vendor_power_prop:s0
 # GPS
 persist.backup.ntpServer            u:object_r:vendor_location_prop:s0
 
@@ -56,9 +62,6 @@ sys.oppo.bsp.drm.                   u:object_r:cryptoeng_prop:s0
 
 # NFC
 vendor.nfc_se.config_ready          u:object_r:vendor_nfc_nq_prop:s0
-
-# Perf
-perf_profile                        u:object_r:vendor_perf_prop:s0
 
 # Project
 ro.hardware.chipname                u:object_r:exported_default_prop:s0

@@ -1,4 +1,27 @@
+type sysfs_msm_subsys, fs_type, sysfs_type;
+
 dontaudit hal_power_default self:capability { dac_override };
 
-allow hal_power_default proc_touchpanel:dir search;
-allow hal_power_default proc_touchpanel:file w_file_perms;
+allow hal_power_default {
+  vendor_sysfs_devfreq
+  sysfs_msm_subsys
+  proc_touchpanel
+}:dir search;
+
+allow hal_power_default {
+  cgroup
+  proc
+  vendor_sysfs_devfreq
+  sysfs_devices_system_cpu
+  vendor_sysfs_graphics
+  vendor_sysfs_kgsl
+  sysfs_msm_subsys
+  proc_touchpanel
+}:{
+  file
+  lnk_file
+} rw_file_perms;
+
+allow hal_power_default vendor_latency_device:chr_file rw_file_perms;
+
+set_prop(hal_power_default, vendor_power_prop)
