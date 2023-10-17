@@ -448,7 +448,7 @@
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.internal.deviceinfo</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.2</version>
         <interface>
             <name>IDeviceInfo</name>
             <instance>deviceinfo</instance>
