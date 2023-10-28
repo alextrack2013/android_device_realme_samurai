@@ -82,8 +82,6 @@ persist.log.tag.OpenGLRenderer=S
 persist.log.tag.ultrasound_extn=S
 
 # Media
-media.settings.xml=/vendor/etc/media_profiles_vendor.xml
-media.stagefright.thumbnail.prefer_hw_codecs=true
 persist.mm.enable.prefetch=true
 ro.media.recorder-max-base-layer-fps=60
 vendor.media.vpp.enable=true
