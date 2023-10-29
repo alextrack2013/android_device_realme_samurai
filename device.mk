@@ -192,7 +192,6 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libtinyxml \
     libvulkan \
-    memtrack.msmnile \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
     vendor.qti.hardware.display.allocator-service \
@@ -303,7 +302,6 @@ PRODUCT_COPY_FILES += \
 
 # Net
 PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor \
     netutils-wrapper-1.0
 
 # Neuralnetworks
@@ -318,10 +316,6 @@ PRODUCT_PACKAGES += \
     nqnfcinfo \
     Tag
 
-# OMX
-PRODUCT_PACKAGES += \
-    android.hardware.media.c2@1.0.vendor
-
 # Parts
 $(call inherit-product, packages/apps/RealmeParts/parts.mk)
 
@@ -335,7 +329,12 @@ TARGET_BOARD_PLATFORM := $(MSMNILE)
 
 TARGET_COMMON_QTI_COMPONENTS += \
     bt \
-    media
+    media \
+    overlay \
+    perf \
+    telephony \
+    usb \
+    wlan
 
 # Preopt SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
