@@ -39,8 +39,8 @@
 /(odm|vendor/odm)/bin/hw/vendor.oplus.hardware.engsensor@1.0-service                                  u:object_r:hal_engsensor_default_exec:s0
 
 # Power supply
-/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/ac(/.*)? u:object_r:sysfs_battery_supply:s0
-/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/battery(/.*)? u:object_r:sysfs_battery_supply:s0
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/ac(/.*)? u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/battery(/.*)? u:object_r:vendor_sysfs_battery_supply:s0
 
 # RTC
 /sys/class/rtc/rtc0/hctosys                                                                             u:object_r:sysfs_rtc:s0
@@ -55,8 +55,8 @@
 /vendor/bin/hw/vendor\.lineage\.touch@1\.0-service\.samurai                                             u:object_r:hal_lineage_touch_default_exec:s0
 
 # USB
-/sys/class/power_supply/usb/otg_switch                                                                  u:object_r:sysfs_usb_supply:s0
-/sys/devices/virtual/android_usb/android0/state                                                         u:object_r:sysfs_usb_supply:s0
+/sys/class/power_supply/usb/otg_switch                                                                  u:object_r:vendor_sysfs_usb_supply:s0
+/sys/devices/virtual/android_usb/android0/state                                                         u:object_r:vendor_sysfs_usb_supply:s0
 
 # Vibrator
 /sys/class/leds/vibrator(/.*)?                                                                          u:object_r:sysfs_vibrator:s0
