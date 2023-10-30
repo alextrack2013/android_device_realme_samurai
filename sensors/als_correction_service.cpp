@@ -53,14 +53,6 @@ using aidl::vendor::oplus::hardware::syshelper::ScreenShotInfo;
 static Rect screenshot_rect(677, 19, 707, 49);
 static Rect screenshot_rect_land(1080 - 707, 2400 - 49, 1080 - 677, 2340 - 19);
 
-// See frameworks/base/services/core/jni/com_android_server_display_DisplayControl.cpp and
-// frameworks/base/core/java/android/view/SurfaceControl.java
-static sp<IBinder> getInternalDisplayToken() {
-    const auto displayIds = SurfaceComposerClient::getPhysicalDisplayIds();
-    sp<IBinder> token = SurfaceComposerClient::getPhysicalDisplayToken(displayIds[0]);
-    return token;
-}
-
 class AlsCorrection {
    public:
     ScreenShotInfo takeScreenshot() {
@@ -71,7 +63,7 @@ class AlsCorrection {
 
         sp<SyncScreenCaptureListener> captureListener = new SyncScreenCaptureListener();
         gui::ScreenCaptureResults captureResults;
-        sp<IBinder> display = getInternalDisplayToken();
+        sp<IBinder> display = SurfaceComposerClient::getInternalDisplayToken();
         DisplayCaptureArgs captureArgs = {};
         android::ui::DisplayState state = {};
         SurfaceComposerClient::getDisplayState(display, &state);
