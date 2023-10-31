@@ -8,7 +8,7 @@ TARGET_DEVICE := samurai
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Enable updating of APEXes
@@ -26,7 +26,7 @@ RELAX_USES_LIBRARY_CHECK := true
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-aosp
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
@@ -191,8 +191,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.4-service \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
-    android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service \
     disable_configstore \
     gralloc.msmnile \
     hwcomposer.msmnile \
@@ -201,7 +199,6 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libtinyxml \
     libvulkan \
-    memtrack.msmnile \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
     vendor.qti.hardware.display.allocator-service \

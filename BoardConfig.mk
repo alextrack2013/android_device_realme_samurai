@@ -47,6 +47,7 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xa90000 androidboot.hardware=qcom androidboot.console=ttyMSM0 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=2048 loop.max_part=7 androidboot.usbcontroller=a600000.dwc3 kpti=off cgroup_disable=pressure
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/1d84000.ufshc
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
@@ -99,7 +100,7 @@ TARGET_USES_FOD_ZPOS := true
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/device_framework_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    vendor/aosp/config/device_framework_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
@@ -152,6 +153,7 @@ include device/qcom/sepolicy_vndr/SEPolicy.mk
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Power
 TARGET_USES_INTERACTION_BOOST := true
