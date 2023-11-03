@@ -6,6 +6,7 @@ genfscon proc /sensor/pressure_cali                                        u:obj
 genfscon proc /devinfo                                                     u:object_r:proc_devinfo:s0
 
 # Display
+genfscon sysfs /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/backlight/panel0-backlight u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /sys/devices/platform/soc/soc:qcom,dsi-display-primary      u:object_r:vendor_sysfs_graphics:s0
 
 # Fingerprint

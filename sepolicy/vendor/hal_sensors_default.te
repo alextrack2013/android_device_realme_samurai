@@ -18,7 +18,7 @@ allow hal_sensors_default vendor_persist_sensors_file:dir rw_dir_perms;
 allow hal_sensors_default vendor_persist_sensors_file:file rw_file_perms;
 
 allow hal_sensors_default vendor_sysfs_graphics:dir { search };
-allow hal_sensors_default vendor_sysfs_graphics:file { read open getattr };
+allow hal_sensors_default vendor_sysfs_graphics:file { write read open getattr };
 
 get_prop(hal_sensors_default, vendor_camera_prop)
 

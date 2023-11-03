@@ -5,6 +5,8 @@ allow init oppo_ver_proc:file { read open getattr };
 allow init proc_sensor:file rw_file_perms;
 allow init shell_data_file:file { getattr setattr };
 allow init socket_device:sock_file { create setattr unlink };
+allow init vendor_sysfs_graphics:dir search;
+allow init vendor_sysfs_graphics:file rw_file_perms;
 allow init vendor_sysfs_kgsl:file w_file_perms;
 allow init vendor_sysfs_kgsl:lnk_file r_file_perms;
 allow init sysfs_vibrator:lnk_file { open read };

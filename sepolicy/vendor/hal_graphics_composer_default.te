@@ -1,1 +1,4 @@
 allow hal_graphics_composer_default property_socket:sock_file write;
+
+allow hal_graphics_composer_default vendor_sysfs_graphics:dir search;
+allow hal_graphics_composer_default vendor_sysfs_graphics:file { write read open getattr };

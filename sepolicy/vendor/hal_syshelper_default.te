@@ -1,5 +1,8 @@
 type hal_syshelper_default, domain;
 hal_server_domain(hal_syshelper_default, hal_syshelper)
 
+allow hal_syshelper_default vendor_sysfs_graphics:dir search;
+allow hal_syshelper_default vendor_sysfs_graphics:file { write read open getattr };
+
 type hal_syshelper_default_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(hal_syshelper_default)
