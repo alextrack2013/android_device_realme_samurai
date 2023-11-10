@@ -101,7 +101,7 @@ TARGET_USES_FOD_ZPOS := true
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/device_framework_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/aosp/config/device_framework_matrix.xml
+    vendor/derp/config/device_framework_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
@@ -128,7 +128,9 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
-TARGET_USERIMAGES_SPARSE_EXT_DISABLED := false
+# TARGET_USERIMAGES_SPARSE_EXT_DISABLED := false
+TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
+TARGET_USERIMAGES_SPARSE_EROFS_DISABLED := true
 TARGET_COPY_OUT_ODM := odm
 TARGET_COPY_OUT_VENDOR := vendor
 

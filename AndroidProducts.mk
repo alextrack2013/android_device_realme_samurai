@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_samurai.mk
+    $(LOCAL_DIR)/derp_samurai.mk
