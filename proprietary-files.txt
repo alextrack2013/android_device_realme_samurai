@@ -752,14 +752,6 @@ vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc
 vendor/lib64/vendor.qti.hardware.factory@1.0.so
 vendor/lib64/vendor.qti.hardware.factory@1.1.so
 
-# HBTP
-vendor/etc/hbtp/hbtpcfg_sdm855_801s_4k.dat
-vendor/etc/hbtp/loader.cfg
-vendor/etc/hbtp/qtc801s.bin
-vendor/lib64/libhbtpclient.so
-vendor/lib64/libhbtpdsp.so
-vendor/lib64/libhbtpfrmwk.so
-
 # Health
 vendor/bin/hw/android.hardware.health@2.1-service:vendor/bin/hw/android.hardware.health@2.1-service.samurai
 
