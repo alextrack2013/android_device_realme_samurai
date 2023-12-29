@@ -10,7 +10,7 @@ $(call inherit-product, device/realme/samurai/device.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # GMS
-#$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+$(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_BRAND := realme
