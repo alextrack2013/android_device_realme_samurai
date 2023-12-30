@@ -1108,9 +1108,6 @@
          available on some devices. -->
     <bool name="config_enableHapticTextHandle">true</bool>
 
-    <!-- The indication margin of keyguard -->
-    <dimen name="keyguard_indication_margin_bottom">4dp</dimen>
-
     <!-- Mock Oplus LinearmotorVibratorService -->
     <bool name="config_mockOplusLinearmotorVibratorService">true</bool>
 
